@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Arbaz Khan — Department of Mathematics, IIT Roorkee</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F7F4EC;
+    --paper-alt:#EFEAdd;
+    --ink:#242019;
+    --ink-soft:#5B564C;
+    --pine:#1E3D36;
+    --pine-soft:#3C6058;
+    --brass:#9C7A2E;
+    --line:#DCD5C3;
+    --card:#FBF9F3;
+    --focus:#9C7A2E;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --paper:#181614;
+      --paper-alt:#201D19;
+      --ink:#EEE8DA;
+      --ink-soft:#B9B1A0;
+      --pine:#8FBBAE;
+      --pine-soft:#6D998C;
+      --brass:#D9AE5C;
+      --line:#3A362E;
+      --card:#1E1B17;
+      --focus:#D9AE5C;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper:#181614;
+    --paper-alt:#201D19;
+    --ink:#EEE8DA;
+    --ink-soft:#B9B1A0;
+    --pine:#8FBBAE;
+    --pine-soft:#6D998C;
+    --brass:#D9AE5C;
+    --line:#3A362E;
+    --card:#1E1B17;
+    --focus:#D9AE5C;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Public Sans", -apple-system, "Segoe UI", sans-serif;
+    line-height:1.6;
+  }
+  h1,h2,h3,.serif{
+    font-family:"Spectral", Georgia, "Times New Roman", serif;
+    color:var(--ink);
+    font-weight:500;
+  }
+  a{color:var(--pine-soft);}
+  a:hover{color:var(--brass);}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--focus);
+    outline-offset:3px;
+  }
+  .wrap{
+    max-width:1180px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:280px minmax(0,1fr);
+    gap:0;
+  }
+  /* sidebar */
+  .side{
+    padding:3rem 2rem 3rem 1.5rem;
+    border-right:1px solid var(--line);
+  }
+  .side-inner{position:sticky; top:2rem;}
+  .mark{
+    width:52px;height:52px;border-radius:50%;
+    background:var(--pine);
+    color:var(--paper);
+    display:flex;align-items:center;justify-content:center;
+    font-family:"Spectral",serif; font-size:1.15rem; font-weight:600;
+    margin-bottom:1.1rem;
+  }
+  .side h1{font-size:1.5rem;margin:0 0 .15rem;line-height:1.25;}
+  .side .role{font-size:.92rem;color:var(--ink-soft);margin:0 0 .1rem;}
+  .side .dept{font-size:.92rem;color:var(--ink-soft);margin:0 0 1.5rem;}
+  nav.sidenav{display:flex;flex-direction:column;gap:.55rem;margin-bottom:1.6rem;}
+  nav.sidenav a{
+    font-size:.94rem;
+    color:var(--ink);
+    text-decoration:none;
+    border-left:2px solid transparent;
+    padding-left:.7rem;
+  }
+  nav.sidenav a:hover{color:var(--pine-soft); border-left-color:var(--line);}
+  nav.sidenav a.active{border-left-color:var(--brass); color:var(--brass);}
+  .side-links{display:flex; flex-direction:column; gap:.4rem; font-size:.84rem;}
+  .side-links a{color:var(--ink-soft); text-decoration:none;}
+  .side-links a:hover{color:var(--brass);}
+
+  main{padding:3rem 2.5rem 5rem;}
+  section{max-width:720px; margin:0 0 4.5rem;}
+  section:target{scroll-margin-top:2rem;}
+  .eyebrow{
+    font-size:.82rem;
+    color:var(--pine-soft);
+    margin:0 0 .4rem;
+  }
+  section h2{font-size:1.7rem; margin:0 0 1.1rem;}
+  p{margin:0 0 1rem;}
+
+  /* hero */
+  .hero{position:relative; padding-top:.5rem;}
+  .hero svg.mesh{
+    position:absolute; right:-40px; top:-40px; width:340px; height:340px;
+    opacity:.16; z-index:0; pointer-events:none;
+  }
+  .hero-inner{position:relative; z-index:1;}
+  .hero h2{font-size:2.1rem; line-height:1.3; max-width:600px;}
+  .hero .lede{font-size:1.05rem; color:var(--ink-soft); max-width:600px;}
+
+  .theme-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:1.15rem;}
+  .theme-list li{
+    border-left:2px solid var(--line);
+    padding-left:1rem;
+  }
+  .theme-list h3{font-size:1.05rem; margin:0 0 .25rem; font-weight:600;}
+  .theme-list p{margin:0; font-size:.95rem; color:var(--ink-soft);}
+
+  .pub-list{list-style:none; margin:0; padding:0;}
+  .pub-list li{
+    padding:1rem 0;
+    border-bottom:1px solid var(--line);
+  }
+  .pub-list li:first-child{padding-top:0;}
+  .pub-title{font-weight:500; margin:0 0 .3rem; font-size:1rem;}
+  .pub-meta{font-size:.88rem; color:var(--ink-soft); margin:0;}
+  .pub-meta i{font-style:italic;}
+  .pub-year{
+    display:inline-block; font-size:.78rem; color:var(--brass);
+    margin-bottom:.25rem;
+  }
+
+  table.proj{width:100%; border-collapse:collapse; font-size:.92rem;}
+  table.proj th{
+    text-align:left; font-weight:600; font-size:.78rem;
+    color:var(--ink-soft); padding:0 0 .6rem; border-bottom:1px solid var(--line);
+  }
+  table.proj td{
+    padding:.85rem 0; border-bottom:1px solid var(--line); vertical-align:top;
+  }
+  table.proj td.amt{white-space:nowrap; color:var(--ink-soft);}
+
+  .contact-grid{display:flex; flex-direction:column; gap:.55rem; font-size:.98rem;}
+  .contact-grid a{text-decoration:none;}
+  .note{
+    font-size:.85rem; color:var(--ink-soft); background:var(--paper-alt);
+    border:1px solid var(--line); border-radius:4px; padding:.9rem 1.05rem;
+    margin-top:1.5rem;
+  }
+
+  footer{
+    max-width:720px; padding:0 0 3rem; margin-left:auto; margin-right:auto;
+    font-size:.82rem; color:var(--ink-soft); grid-column:2;
+  }
+
+  @media (max-width: 860px){
+    .wrap{grid-template-columns:1fr;}
+    .side{
+      border-right:none; border-bottom:1px solid var(--line);
+      padding:1.6rem 1.5rem;
+    }
+    .side-inner{position:static;}
+    nav.sidenav{flex-direction:row; flex-wrap:wrap; gap:1rem;}
+    nav.sidenav a{border-left:none; padding-left:0; border-bottom:2px solid transparent;}
+    nav.sidenav a.active{border-left-color:transparent; border-bottom-color:var(--brass);}
+    main{padding:2.2rem 1.5rem 3rem;}
+    .hero svg.mesh{display:none;}
+    footer{padding-left:1.5rem; padding-right:1.5rem;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <aside class="side">
+    <div class="side-inner">
+      <div class="mark" aria-hidden="true">AK</div>
+      <h1>Arbaz Khan</h1>
+      <p class="role">Associate Professor</p>
+      <p class="dept">Department of Mathematics<br>IIT Roorkee</p>
+
+      <nav class="sidenav" aria-label="Section navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="side-links">
+        <a href="https://scholar.google.de/citations?hl=en&user=a1lyQpUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Arbaz_Khan2" target="_blank" rel="noopener">ResearchGate</a>
+        <a href="https://orcid.org/0000-0001-6625-700X" target="_blank" rel="noopener">ORCID</a>
+        <a href="http://arxiv.org/a/khan_a_3" target="_blank" rel="noopener">arXiv</a>
+      </div>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about" class="hero">
+      <svg class="mesh" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g fill="none" stroke="var(--pine)" stroke-width="1">
+          <path d="M20 40 L120 10 L200 60 L280 20"/>
+          <path d="M20 40 L60 130 L120 10"/>
+          <path d="M120 10 L160 100 L200 60"/>
+          <path d="M60 130 L160 100 L120 10"/>
+          <path d="M160 100 L220 150 L200 60 L280 20 L260 110 L220 150"/>
+          <path d="M60 130 L110 210 L160 100 L220 150 L180 240"/>
+          <path d="M110 210 L180 240 L220 150"/>
+          <path d="M110 210 L150 290 L180 240"/>
+          <path d="M20 40 L60 130 L10 190"/>
+          <path d="M60 130 L10 190 L50 260 L110 210"/>
+        </g>
+        <g fill="var(--pine)">
+          <circle cx="20" cy="40" r="2.5"/><circle cx="120" cy="10" r="2.5"/><circle cx="200" cy="60" r="2.5"/>
+          <circle cx="280" cy="20" r="2.5"/><circle cx="60" cy="130" r="2.5"/><circle cx="160" cy="100" r="2.5"/>
+          <circle cx="220" cy="150" r="2.5"/><circle cx="260" cy="110" r="2.5"/><circle cx="110" cy="210" r="2.5"/>
+          <circle cx="180" cy="240" r="2.5"/><circle cx="10" cy="190" r="2.5"/><circle cx="50" cy="260" r="2.5"/>
+          <circle cx="150" cy="290" r="2.5"/>
+        </g>
+      </svg>
+      <div class="hero-inner">
+        <p class="eyebrow">Numerical analysis · partial differential equations</p>
+        <h2>Finite element and spectral methods for problems in elasticity, poroelasticity, and nonlinear flow.</h2>
+        <p class="lede">I work on the numerical analysis of partial differential equations, with an emphasis on designing and analysing finite element, spectral element, and discontinuous Galerkin methods — and on the optimal control of nonlinear flow problems. Based at the Department of Mathematics, IIT Roorkee.</p>
+        <p style="font-size:.92rem; color:var(--ink-soft);">Roorkee 247667, Uttarakhand, India</p>
+      </div>
+    </section>
+
+    <section id="research">
+      <p class="eyebrow">Research</p>
+      <h2>Research interests</h2>
+      <ul class="theme-list">
+        <li>
+          <h3>Finite and spectral element methods</h3>
+          <p>Construction and error analysis of conforming, nonconforming, and spectral element methods for elliptic and parabolic PDEs, including problems with corner singularities and unbounded domains.</p>
+        </li>
+        <li>
+          <h3>Mixed methods and eigenvalue problems</h3>
+          <p>Mixed and pseudostress-based finite element formulations for elasticity, Stokes, and poroelasticity eigenvalue problems, including locking-free and heterogeneous-media formulations.</p>
+        </li>
+        <li>
+          <h3>Discontinuous Galerkin &amp; nonconforming methods</h3>
+          <p>Interior penalty and DG discretisations for nearly incompressible elasticity and for reaction–diffusion equations with weakly singular kernels, such as the delayed Burgers–Huxley equation.</p>
+        </li>
+        <li>
+          <h3>Optimal control of nonlinear flows</h3>
+          <p>Well-posedness, regularity, and control of doubly diffusive and other coupled nonlinear flow models on bounded Lipschitz domains.</p>
+        </li>
+        <li>
+          <h3>Preconditioning &amp; uncertainty quantification</h3>
+          <p>Robust preconditioners for stochastic Galerkin formulations of parameter-dependent elasticity and related PDE systems.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <p class="eyebrow">Selected publications</p>
+      <h2>Publications</h2>
+      <ul class="pub-list">
+        <li>
+          <span class="pub-year">2026</span>
+          <p class="pub-title">A locking-free mixed FEM based on a pure pseudostress-based formulation for the elasticity eigenproblem</p>
+          <p class="pub-meta">A. Khan, F. Lepe, J. Vellojin — preprint</p>
+        </li>
+        <li>
+          <span class="pub-year">2024</span>
+          <p class="pub-title">Finite element approximation for the delayed generalized Burgers–Huxley equation with weakly singular kernel: Part II — nonconforming and DG approximation</p>
+          <p class="pub-meta">S. Mahajan, A. Khan — <i>SIAM Journal on Scientific Computing</i>, 46(5), A2972–A2998</p>
+        </li>
+        <li>
+          <span class="pub-year">2023</span>
+          <p class="pub-title">Finite element approximation for a delayed generalized Burgers–Huxley equation with weakly singular kernels: Part I — well-posedness, regularity and conforming approximation</p>
+          <p class="pub-meta">S. Mahajan, A. Khan, M. T. Mohan — arXiv:2309.01636</p>
+        </li>
+        <li>
+          <span class="pub-year">2023</span>
+          <p class="pub-title">Optimal control of stationary doubly diffusive flows on two- and three-dimensional bounded Lipschitz domains: a theoretical study</p>
+          <p class="pub-meta">J. Tushar, A. Khan, M. T. Mohan — arXiv:2308.02178</p>
+        </li>
+        <li>
+          <span class="pub-year">2019</span>
+          <p class="pub-title">Robust error estimation for lowest-order approximation of nearly incompressible elasticity</p>
+          <p class="pub-meta">A. Khan, C. E. Powell, D. Silvester — <i>International Journal for Numerical Methods in Engineering</i>, 119, 18–37</p>
+        </li>
+        <li>
+          <span class="pub-year">2019</span>
+          <p class="pub-title">Robust preconditioning for stochastic Galerkin formulations of parameter-dependent nearly incompressible elasticity equations</p>
+          <p class="pub-meta">A. Khan, C. E. Powell, D. J. Silvester — <i>SIAM Journal on Scientific Computing</i>, 41(1), A402–A421</p>
+        </li>
+        <li>
+          <span class="pub-year">2018</span>
+          <p class="pub-title">Arnold–Winther mixed finite elements for Stokes eigenvalue problems</p>
+          <p class="pub-meta">J. Gedicke, A. Khan — <i>SIAM Journal on Scientific Computing</i>, 40(5), A3449–A3469</p>
+        </li>
+        <li>
+          <span class="pub-year">2017</span>
+          <p class="pub-title">Spectral element method for three-dimensional elliptic problems with smooth interfaces</p>
+          <p class="pub-meta">A. Khan, A. Husain, S. Mohapatra, C. S. Upadhyay — <i>Computer Methods in Applied Mechanics and Engineering</i>, 315, 522–549</p>
+        </li>
+        <li>
+          <span class="pub-year">2017</span>
+          <p class="pub-title">Least-squares spectral element preconditioners for fourth-order elliptic problems</p>
+          <p class="pub-meta">A. Hussain, A. Khan — <i>Computers &amp; Mathematics with Applications</i>, 74(3), 482–503</p>
+        </li>
+        <li>
+          <span class="pub-year">2016</span>
+          <p class="pub-title">Exponentially accurate nonconforming least-squares spectral element method for elliptic problems on unbounded domains</p>
+          <p class="pub-meta">A. Khan, C. S. Upadhyay — <i>Computer Methods in Applied Mechanics and Engineering</i>, 305, 607–633</p>
+        </li>
+      </ul>
+      <p class="note">This is a short selected list. The full, current list — including forthcoming and in-press work — is kept up to date on <a href="https://scholar.google.de/citations?hl=en&user=a1lyQpUAAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">Google Scholar</a>.</p>
+    </section>
+
+    <section id="projects">
+      <p class="eyebrow">Sponsored research</p>
+      <h2>Projects</h2>
+      <table class="proj">
+        <tr><th>Title</th><th>Agency</th><th>Amount</th></tr>
+        <tr>
+          <td>Optimal control of doubly diffusive flow: theoretical studies and numerical analysis<br><span style="color:var(--ink-soft); font-size:.85rem;">Started Mar 2022 · Co-PI: Prof. Manil T. Mohan</span></td>
+          <td>SERB-CRG</td>
+          <td class="amt">₹26,81,096</td>
+        </tr>
+        <tr>
+          <td>A fast and efficient numerical method for convection-dominated problems on parallel computers<br><span style="color:var(--ink-soft); font-size:.85rem;">Started Oct 2020</span></td>
+          <td>Faculty Initiation Grant, SRIC IIT Roorkee</td>
+          <td class="amt">₹16,00,000</td>
+        </tr>
+        <tr>
+          <td>Analysis of an efficient and fast numerical method for poroelasticity with uncertain inputs<br><span style="color:var(--ink-soft); font-size:.85rem;">Started Dec 2020 · 3 years</span></td>
+          <td>SERB-DST (MATRICS)</td>
+          <td class="amt">₹6,60,000</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="contact">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Contact</h2>
+      <div class="contact-grid">
+        <div>Department of Mathematics<br>Indian Institute of Technology Roorkee<br>Roorkee 247667, Uttarakhand, India</div>
+        <div><a href="mailto:arbaz@ma.iitr.ac.in">arbaz@ma.iitr.ac.in</a></div>
+        <div>+91-1332-284891</div>
+      </div>
+      <p class="note">Note for editing: this page draws on the content already public on your Google Sites page, Google Scholar, ResearchGate, and the IIT Roorkee faculty directory. Swap in your own portrait, refine the About paragraph, and add Teaching and Students sections with the specifics you'd like listed.</p>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Arbaz Khan · Department of Mathematics, IIT Roorkee</footer>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const sections = document.querySelectorAll('main section[id]');
+const links = document.querySelectorAll('.sidenav a');
+const setActive = () => {
+  let current = sections[0] && sections[0].id;
+  sections.forEach(s => {
+    if (window.scrollY + 120 >= s.offsetTop) current = s.id;
+  });
+  links.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+};
+window.addEventListener('scroll', setActive, { passive: true });
+setActive();
+</script>
+</body>
+</html>
