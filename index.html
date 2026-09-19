@@ -181,10 +181,10 @@
   }
   table.proj td.amt{white-space:nowrap; color:var(--ink-soft);}
 
-  #students h3{
+  #students h3, #cv h3{
     font-size:1rem; color:var(--pine-soft); margin:1.7rem 0 .7rem; font-weight:600;
   }
-  #students h3:first-of-type{margin-top:0;}
+  #students h3:first-of-type, #cv h3:first-of-type{margin-top:0;}
   .people-list{list-style:none; margin:0 0 .5rem; padding:0;}
   .people-list li{padding:.65rem 0; border-bottom:1px solid var(--line);}
   .people-list li:last-child{border-bottom:none;}
@@ -236,6 +236,7 @@
 
       <nav class="sidenav" aria-label="Section navigation">
         <a href="#about">About</a>
+        <a href="#cv">CV</a>
         <a href="#news">News</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
@@ -284,6 +285,43 @@
       </div>
     </section>
 
+    <section id="cv">
+      <p class="eyebrow">Background</p>
+      <h2>Education &amp; Experience</h2>
+
+      <h3>Education</h3>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">2008–2015</span>
+          <p>PhD in Applied Mathematics, Indian Institute of Technology Kanpur, India.</p>
+        </li>
+      </ul>
+
+      <h3>Experience</h3>
+      <ul class="news-list">
+        <li>
+          <span class="news-date">2025–present</span>
+          <p>Associate Professor, Department of Mathematics, IIT Roorkee, India.</p>
+        </li>
+        <li>
+          <span class="news-date">2020–2025</span>
+          <p>Assistant Professor, Department of Mathematics, IIT Roorkee, India.</p>
+        </li>
+        <li>
+          <span class="news-date">2017–2020</span>
+          <p>Postdoctoral Research Associate, The University of Manchester, UK — hosts: Prof. David J. Silvester and Dr. Catherine E. Powell.</p>
+        </li>
+        <li>
+          <span class="news-date">2015–2017</span>
+          <p>Postdoctoral Fellow, Heidelberg University, Germany.</p>
+        </li>
+        <li>
+          <span class="news-date">2015</span>
+          <p>Postdoctoral Fellow, Indian Institute of Technology Kanpur, India — host: Prof. C. S. Upadhyay.</p>
+        </li>
+      </ul>
+    </section>
+
     <section id="news">
       <p class="eyebrow">Recent news</p>
       <h2>News</h2>
@@ -294,11 +332,19 @@
         </li>
         <li>
           <span class="news-date">2026</span>
-          <p>Paper <em>"Interior penalty discontinuous Galerkin methods for the nearly incompressible elasticity eigenvalue problem with heterogeneous media"</em> (with F. Lepe and J. Vellojin) published in <i>SIAM Journal on Scientific Computing</i>, 48(2), A568–A599.</p>
+          <p>Paper <em>"Interior penalty discontinuous Galerkin methods for the nearly incompressible elasticity eigenvalue problem with heterogeneous media"</em> (with F. Lepe and J. Vellojin) published in <i>SIAM Journal on Scientific Computing</i>, 48(2), C191–C215.</p>
         </li>
         <li>
-          <span class="news-date">2025</span>
-          <p>Paper <em>"Finite element analysis of the nearly incompressible linear elasticity eigenvalue problem with variable coefficients"</em> (with F. Lepe, D. Mora, J. Vellojin) accepted in <i>Numerische Mathematik</i>.</p>
+          <span class="news-date">2026</span>
+          <p>Paper <em>"Finite element analysis of the nearly incompressible linear elasticity eigenvalue problem with variable coefficients"</em> (with F. Lepe, D. Mora, J. Vellojin) published in <i>Numerische Mathematik</i>, 158, 1473–1512.</p>
+        </li>
+        <li>
+          <span class="news-date">2026</span>
+          <p>Paper <em>"Adaptive Embedded DG Methods for Optimal Control of Oseen Equations"</em> (with H. Singh) published in <i>Journal of Scientific Computing</i>, 108(1), article 16.</p>
+        </li>
+        <li>
+          <span class="news-date">2026</span>
+          <p>Paper <em>"Non-conforming structure preserving finite element method for doubly diffusive flows on bounded Lipschitz domains"</em> (with J. Tushar and M. T. Mohan) published in <i>Journal of Scientific Computing</i>, 107(2), article 58.</p>
         </li>
         <li>
           <span class="news-date">2025</span>
@@ -496,8 +542,18 @@
       <ul class="pub-list">
         <li>
           <span class="pub-year">2026</span>
+          <p class="pub-title">Adaptive Embedded DG Methods for Optimal Control of Oseen Equations</p>
+          <p class="pub-meta">H. Singh, A. Khan — <i>Journal of Scientific Computing</i>, 108(1), article 16</p>
+        </li>
+        <li>
+          <span class="pub-year">2026</span>
+          <p class="pub-title">Non-conforming structure preserving finite element method for doubly diffusive flows on bounded Lipschitz domains</p>
+          <p class="pub-meta">J. Tushar, A. Khan, M. T. Mohan — <i>Journal of Scientific Computing</i>, 107(2), article 58</p>
+        </li>
+        <li>
+          <span class="pub-year">2026</span>
           <p class="pub-title">Interior penalty discontinuous Galerkin methods for the nearly incompressible elasticity eigenvalue problem with heterogeneous media</p>
-          <p class="pub-meta">A. Khan, F. Lepe, J. Vellojin — <i>SIAM Journal on Scientific Computing</i>, 48(2), A568–A599</p>
+          <p class="pub-meta">A. Khan, F. Lepe, J. Vellojin — <i>SIAM Journal on Scientific Computing</i>, 48(2), C191–C215</p>
         </li>
         <li>
           <span class="pub-year">2026</span>
@@ -528,6 +584,11 @@
           <span class="pub-year">2021</span>
           <p class="pub-title">Robust a posteriori error estimation for parameter-dependent linear elasticity equations</p>
           <p class="pub-meta">A. Khan, A. Bespalov, C. E. Powell, D. J. Silvester — <i>Mathematics of Computation</i>, 90, 613–636</p>
+        </li>
+        <li>
+          <span class="pub-year">2020</span>
+          <p class="pub-title">A robust a posteriori error estimator for divergence-conforming discontinuous Galerkin methods for the Oseen equation</p>
+          <p class="pub-meta">A. Khan, G. Kanschat — <i>SIAM Journal on Numerical Analysis</i>, 58(1), 492–518</p>
         </li>
         <li>
           <span class="pub-year">2019</span>
