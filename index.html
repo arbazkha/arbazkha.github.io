@@ -147,10 +147,10 @@
   .news-list em{font-style:italic; color:var(--ink);}
 
   .figure-row{
-    display:flex; gap:1.4rem; margin:0 0 2.2rem; flex-wrap:wrap;
+    display:grid; grid-template-columns:1fr 1fr; gap:1.4rem; margin:0 0 2.2rem;
   }
   .figure-row figure{
-    margin:0; flex:1 1 220px; max-width:260px;
+    margin:0;
   }
   .figure-row svg{width:100%; height:auto; display:block; border-radius:3px;}
   .figure-row figcaption{
@@ -217,6 +217,7 @@
     nav.sidenav a.active{border-left-color:transparent; border-bottom-color:var(--brass);}
     main{padding:2.2rem 1.5rem 3rem;}
     .hero svg.mesh{display:none;}
+    .figure-row{grid-template-columns:1fr;}
     footer{padding-left:1.5rem; padding-right:1.5rem;}
   }
   @media (prefers-reduced-motion: reduce){
@@ -305,7 +306,7 @@
         </li>
         <li>
           <span class="news-date">2025</span>
-          <p>Paper <em>"Divergence conforming DG method for the optimal control of the Oseen equation with variable viscosity"</em> (with S. Mahajan) published in <i>SIAM Journal on Scientific Computing</i>, 47(2), A1251–A1278.</p>
+          <p>Paper <em>"Divergence conforming DG method for the optimal control of the Oseen equation with variable viscosity"</em> (with H. Singh) published in <i>SIAM Journal on Scientific Computing</i>, 47(2), A1251–A1278.</p>
         </li>
       </ul>
       <p class="note">This list tracks recent paper acceptances and publications. Add talks, visits, or student milestones here as they happen.</p>
@@ -495,6 +496,11 @@
           <p class="pub-meta">A. Khan, F. Lepe, J. Vellojin — <i>SIAM Journal on Scientific Computing</i>, 48(2), A568–A599</p>
         </li>
         <li>
+          <span class="pub-year">2026</span>
+          <p class="pub-title">Finite element analysis of the nearly incompressible linear elasticity eigenvalue problem with variable coefficients</p>
+          <p class="pub-meta">A. Khan, F. Lepe, D. Mora, J. Vellojin — <i>Numerische Mathematik</i>, 158, 1473–1512</p>
+        </li>
+        <li>
           <span class="pub-year">2025</span>
           <p class="pub-title">A posteriori error estimates for the generalized Burgers–Huxley equation with weakly singular kernels</p>
           <p class="pub-meta">S. Mahajan, A. Khan — <i>IMA Journal of Numerical Analysis</i> (accepted)</p>
@@ -502,17 +508,12 @@
         <li>
           <span class="pub-year">2025</span>
           <p class="pub-title">Divergence conforming DG method for the optimal control of the Oseen equation with variable viscosity</p>
-          <p class="pub-meta">S. Mahajan, A. Khan — <i>SIAM Journal on Scientific Computing</i>, 47(2), A1251–A1278</p>
+          <p class="pub-meta">H. Singh, A. Khan — <i>SIAM Journal on Scientific Computing</i>, 47(2), A1251–A1278</p>
         </li>
         <li>
           <span class="pub-year">2024</span>
           <p class="pub-title">Finite element approximation for the delayed generalized Burgers–Huxley equation with weakly singular kernel: Part II — nonconforming and DG approximation</p>
           <p class="pub-meta">S. Mahajan, A. Khan — <i>SIAM Journal on Scientific Computing</i>, 46(5), A2972–A2998</p>
-        </li>
-        <li>
-          <span class="pub-year">—</span>
-          <p class="pub-title">Finite element analysis of the nearly incompressible linear elasticity eigenvalue problem with variable coefficients</p>
-          <p class="pub-meta">A. Khan, F. Lepe, D. Mora, J. Vellojin — <i>Numerische Mathematik</i> (accepted)</p>
         </li>
         <li>
           <span class="pub-year">2022</span>
