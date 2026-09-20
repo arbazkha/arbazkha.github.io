@@ -156,6 +156,13 @@
   .figure-row figcaption{
     font-size:.8rem; color:var(--ink-soft); margin-top:.5rem; text-align:center;
   }
+  .collab-figure{
+    margin:0 auto 2.2rem; max-width:100%;
+  }
+  .collab-figure svg{width:100%; height:auto; display:block;}
+  .collab-figure figcaption{
+    font-size:.85rem; color:var(--ink-soft); margin-top:.7rem; text-align:center;
+  }
 
   .pub-list{list-style:none; margin:0; padding:0;}
   .pub-list li{
@@ -507,6 +514,82 @@
           <figcaption>Uncertainty band around an ensemble of PDE solutions</figcaption>
         </figure>
       </div>
+
+      <figure class="collab-figure">
+        <svg viewBox="0 0 1000 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Illustrative world map showing international collaborators and alumni, connected by arcs to IIT Roorkee, India">
+          <rect x="0" y="0" width="1000" height="500" fill="var(--card)" stroke="var(--line)"/>
+
+          <!-- simplified illustrative continents (not to scale / not exact borders) -->
+          <g fill="var(--paper-alt)" stroke="var(--line)" stroke-width="1">
+            <path d="M90,70 Q180,40 260,80 Q300,120 280,180 Q250,230 180,220 Q100,210 70,160 Q50,110 90,70 Z"/>
+            <path d="M200,250 Q260,240 290,290 Q310,340 290,390 Q270,430 220,420 Q180,400 170,350 Q160,290 200,250 Z"/>
+            <path d="M440,60 Q500,50 530,80 Q545,120 520,150 Q480,170 450,150 Q425,110 440,60 Z"/>
+            <path d="M460,170 Q540,160 570,220 Q590,290 560,350 Q530,400 480,390 Q450,340 445,280 Q440,220 460,170 Z"/>
+            <path d="M560,60 Q700,30 850,70 Q920,110 900,180 Q880,240 800,270 Q700,300 620,270 Q560,240 550,180 Q540,110 560,60 Z"/>
+            <path d="M800,340 Q870,330 910,360 Q925,390 900,415 Q860,430 820,415 Q790,390 800,340 Z"/>
+          </g>
+
+          <!-- arcs from India (hub) to each location -->
+          <g fill="none" stroke="var(--pine-soft)" stroke-width="1.5" opacity="0.6">
+            <path d="M680,230 Q600,80 470,62"/>
+            <path d="M680,230 Q580,100 440,92"/>
+            <path d="M680,230 Q600,110 478,98"/>
+            <path d="M680,230 Q610,120 495,105"/>
+            <path d="M680,230 Q590,130 452,112"/>
+            <path d="M680,230 Q600,150 472,140"/>
+            <path d="M680,230 Q620,190 560,205"/>
+            <path d="M680,230 Q450,380 250,400"/>
+            <path d="M680,230 Q780,350 850,385"/>
+            <path d="M680,230 Q420,140 175,145"/>
+          </g>
+
+          <!-- leader lines for the clustered European pins -->
+          <g stroke="var(--ink-soft)" stroke-width="0.7" opacity="0.55">
+            <line x1="470" y1="62" x2="555" y2="51"/>
+            <line x1="440" y1="92" x2="555" y2="71"/>
+            <line x1="478" y1="98" x2="555" y2="91"/>
+            <line x1="495" y1="105" x2="555" y2="111"/>
+            <line x1="452" y1="112" x2="555" y2="131"/>
+            <line x1="472" y1="140" x2="555" y2="151"/>
+          </g>
+
+          <g font-family="'Public Sans', sans-serif" font-size="16" fill="var(--ink)">
+            <circle cx="470" cy="62" r="6" fill="var(--pine)"/>
+            <text x="560" y="55">Norway</text>
+
+            <circle cx="440" cy="92" r="6" fill="var(--pine)"/>
+            <text x="560" y="75">United Kingdom</text>
+
+            <circle cx="478" cy="98" r="6" fill="var(--pine)"/>
+            <text x="560" y="95">Germany</text>
+
+            <circle cx="495" cy="105" r="6" fill="var(--pine)"/>
+            <text x="560" y="115">Czech Republic</text>
+
+            <circle cx="452" cy="112" r="6" fill="var(--pine)"/>
+            <text x="560" y="135">France</text>
+
+            <circle cx="472" cy="140" r="6" fill="var(--pine)"/>
+            <text x="560" y="155">Italy</text>
+
+            <circle cx="560" cy="205" r="6" fill="var(--pine)"/>
+            <text x="574" y="209">Saudi Arabia</text>
+
+            <circle cx="250" cy="400" r="6" fill="var(--pine)"/>
+            <text x="236" y="404" text-anchor="end">Chile</text>
+
+            <circle cx="850" cy="385" r="6" fill="var(--pine)"/>
+            <text x="864" y="389">Australia</text>
+
+            <circle cx="175" cy="145" r="6" fill="var(--pine)"/>
+            <text x="161" y="149" text-anchor="end">United States</text>
+
+            <circle cx="680" cy="230" r="9" fill="var(--brass)"/>
+            <text x="680" y="256" text-anchor="middle" font-weight="600">IIT Roorkee, India</text>
+          </g>
+        </svg>
+        <figcaption>Illustrative world map of international collaborators and alumni, by country</figcaption>
+      </figure>
 
       <ul class="theme-list">
         <li>
